@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return 'NINSH';
+    return view('welcome');
 });
 Route::get('/pinsh', function () {
     return 'PINSH';
