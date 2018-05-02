@@ -17,3 +17,6 @@ Route::get('/', function () {
 Route::get('/pinsh', function () {
     return 'PINSH';
 });
+Route::get('/slinsh', function () {
+    return 'Slinsh';
+});
