@@ -20,3 +20,6 @@ Route::get('/pinsh', function () {
 Route::get('/slinsh', function () {
     return 'Slinsh';
 });
+Route::get('/paluns', function () {
+    return 'PAluns';
+});
