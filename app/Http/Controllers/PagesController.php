@@ -13,7 +13,7 @@ class PagesController extends Controller
 
     function about(){
     	$light = 22;
-    	return view('pages/about')->with($light);
+    	return view('pages/about')->with('hasan',$light);
     }
 
 
