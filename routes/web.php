@@ -14,12 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/pinsh', function () {
-    return 'PINSH';
-});
-Route::get('/slinsh', function () {
-    return 'Slinsh';
-});
+Route::get('/about','PagesController@about' );
+Route::get('/services','PagesController@services');
 Route::get('/paluns', function () {
     return 'PAluns';
 });

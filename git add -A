@@ -1,0 +1,41 @@
+[1mdiff --git a/app/Http/Controllers/PagesController.php b/app/Http/Controllers/PagesController.php[m
+[1mindex 8a1fa1b..04c2c64 100644[m
+[1m--- a/app/Http/Controllers/PagesController.php[m
+[1m+++ b/app/Http/Controllers/PagesController.php[m
+[36m@@ -6,5 +6,14 @@[m [muse Illuminate\Http\Request;[m
+ [m
+ class PagesController extends Controller[m
+ {[m
+[31m-    //[m
+[32m+[m[32m    function about(){[m
+[32m+[m
+[32m+[m[41m    [m	[32mreturn view('pages/about');[m
+[32m+[m[32m    }[m
+ }[m
+[32m+[m
+[32m+[m[32mfunction services(){[m
+[32m+[m
+[32m+[m[41m    [m	[32mreturn view('pages/services');[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/routes/web.php b/routes/web.php[m
+[1mindex 088a904..2d73765 100644[m
+[1m--- a/routes/web.php[m
+[1m+++ b/routes/web.php[m
+[36m@@ -14,12 +14,8 @@[m
+ Route::get('/', function () {[m
+     return view('welcome');[m
+ });[m
+[31m-Route::get('/pinsh', function () {[m
+[31m-    return 'PINSH';[m
+[31m-});[m
+[31m-Route::get('/slinsh', function () {[m
+[31m-    return 'Slinsh';[m
+[31m-});[m
+[32m+[m[32mRoute::get('/about','PagesController@about' );[m
+[32m+[m[32mRoute::get('/services','PagesController@services');[m
+ Route::get('/paluns', function () {[m
+     return 'PAluns';[m
+ });[m
+\ No newline at end of file[m
