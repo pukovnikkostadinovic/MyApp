@@ -17,3 +17,5 @@ Route::get('/services','PagesController@services');
 Route::get('/paluns', function () {
     return 'PAluns';
 });
+
+Route::get('/ninsh', 'PagesController@pinsh');

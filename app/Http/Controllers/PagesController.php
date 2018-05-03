@@ -24,5 +24,8 @@ public function services(){
 			'computing', 'flushing', 'fantastic']);
     	return view('pages/services')->with($data);
     }
-
+public function pinsh(){
+	$ninsh = 55;
+		return view('pages/pinsh')->with('ninsh',$ninsh);
+	}
 }
