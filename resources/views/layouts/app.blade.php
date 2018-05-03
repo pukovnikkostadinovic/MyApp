@@ -63,6 +63,7 @@
                 margin-bottom: 30px;
             }
         </style>
+        @yield('dzava')
     </head>
     <body>
     @yield('content')

@@ -18,8 +18,11 @@ class PagesController extends Controller
 
 
 public function services(){
-
-    	return view('pages/services');
+		$data = array(
+			'title'=>'Services',
+			'services'=>['Programming','web design',
+			'computing', 'flushing', 'fantastic']);
+    	return view('pages/services')->with($data);
     }
 
 }
