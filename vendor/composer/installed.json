@@ -978,6 +978,51 @@
         ]
     },
     {
+        "name": "miroc/laravel-adminer",
+        "version": "4.3.1",
+        "version_normalized": "4.3.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/miroc/Laravel-Adminer.git",
+            "reference": "c93d2757529907d25a6e53d77e3b99000793b6ec"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/miroc/Laravel-Adminer/zipball/c93d2757529907d25a6e53d77e3b99000793b6ec",
+            "reference": "c93d2757529907d25a6e53d77e3b99000793b6ec",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/support": "5.*",
+            "php": ">=5.4.0"
+        },
+        "time": "2017-08-01T22:46:06+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "Miroc\\LaravelAdminer\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Miroslav Svitok",
+                "email": "mirosvitok@gmail.com"
+            }
+        ],
+        "description": "Adminer (by Jakub Vrana) wrapper for Laravel 5",
+        "keywords": [
+            "adminer",
+            "database",
+            "laravel5",
+            "management"
+        ]
+    },
+    {
         "name": "mockery/mockery",
         "version": "1.0",
         "version_normalized": "1.0.0.0",

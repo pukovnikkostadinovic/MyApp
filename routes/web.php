@@ -19,3 +19,5 @@ Route::get('/paluns', function () {
 });
 
 Route::get('/ninsh', 'PagesController@pinsh');
+Route::any('adminer', '\Miroc\LaravelAdminer\AdminerController@index');
+
