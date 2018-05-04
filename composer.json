@@ -10,7 +10,8 @@
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.4.0",
-        "miroc/laravel-adminer": "^4.3"
+        "miroc/laravel-adminer": "^4.3",
+        "unisharp/laravel-ckeditor": "^4.7"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
