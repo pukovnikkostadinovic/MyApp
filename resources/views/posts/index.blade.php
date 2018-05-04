@@ -3,7 +3,7 @@
 @section('content')
 
 <h3>Posts</h3>
-@if(count($posts)>1)
+@if(count($posts)>0)
 <ul>
 @foreach($posts as $post)
 <div class="well">
@@ -11,6 +11,7 @@
 <small>Written on {{$post->created_at}}</small>
 </div>
 @endforeach
+{{$posts->links()}}
 </ul>
 @else
 <p>No posts found</p>
