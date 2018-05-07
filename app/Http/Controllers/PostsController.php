@@ -69,7 +69,11 @@ return redirect('/posts')->with('success','Post Created');
      */
     public function edit($id)
     {
-        //
+         	
+	$post = Post::find($id);
+       
+	 return view('posts/edit')->with('post',$post);
+
     }
 
     /**
