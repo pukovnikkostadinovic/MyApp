@@ -39,7 +39,7 @@ class PostsController extends Controller
         $this->validate($request,[
 		'title'=>'required',
 		'body'=>'required']);
-	$post=new Post;
+	$post=Post::find($id);
     $post->title = $request->input('title');
     $post->body = $request->input('body');
 $post->save();
@@ -85,7 +85,15 @@ return redirect('/posts')->with('success','Post Created');
      */
     public function update(Request $request, $id)
     {
-        //
+                $this->validate($request,[
+		'title'=>'required',
+		'body'=>'required']);
+	$post=new Post;
+    	$post->title = $request->input('title');
+    	$post->body = $request->input('body');
+	$post->save();
+return redirect('/posts')->with('success','Post Updated');
+
     }
 
     /**
@@ -96,6 +104,8 @@ return redirect('/posts')->with('success','Post Created');
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+	$post->delete();
+	return redirect('/posts')->with('success','Post Removed');
     }
 }
