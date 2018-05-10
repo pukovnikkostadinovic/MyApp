@@ -13,7 +13,7 @@ class AddUserIdToPosts extends Migration
      */
     public function up()
     {
-       Schema::table('MyApp', function($table){
+       Schema::table('posts', function($table){
        $table->integer('user_id');
        });
     }
@@ -25,7 +25,7 @@ class AddUserIdToPosts extends Migration
      */
     public function down()
     {
-        Schema::table('MyApp', function($table){
+        Schema::table('posts', function($table){
        $table->dropColumn('user_id');
        });
     }
