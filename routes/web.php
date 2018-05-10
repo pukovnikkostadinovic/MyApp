@@ -17,6 +17,9 @@ Route::get('/services','PagesController@services');
 Route::get('/paluns', function () {
     return 'PAluns';
 });
+Route::get('/navbar1', function () {
+    return view('inc/navbar1');
+});
 
 Route::get('/ninsh', 'PagesController@pinsh');
 Route::any('adminer', '\Miroc\LaravelAdminer\AdminerController@index');
