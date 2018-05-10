@@ -19,10 +19,8 @@
                     <li><a href="/services">Services</a></li>
                     <li><a href="/posts">Blog</a></li>
                     <li><a href="/">Home</a></li>
-   
-     
-     
-      </li>
+                    </ul>
+  
       <li class="nav-item">
         <a class="nav-link" href="/posts">Blog</a>
       </li>
