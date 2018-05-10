@@ -10,14 +10,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li><a href="/adminer">Adminer</a></li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/posts">Blog</a></li>
+                        
                     </ul>
                     <ul class="nav navbar-nav">
-                    
+                    <li class="nav-item"><a href="/adminer">Adminer</a></li>
+                    <li class="nav-item"><a href="/">Home</a></li>
+                    <li class="nav-item"><a href="/about">About</a></li>
+                    <li class="nav-item"><a href="/services">Services</a></li>
+                    <li class="nav-item"><a href="/posts">Blog</a></li>
                     </ul>
   
       <li class="nav-item">
