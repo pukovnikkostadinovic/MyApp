@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
     <div class="container">
         <a class="navbar-brand" href="#">Brand</a>
@@ -78,3 +81,4 @@
         </div>
     </div>
 </div>
+@endsection
