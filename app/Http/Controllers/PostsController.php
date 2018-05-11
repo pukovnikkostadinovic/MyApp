@@ -12,10 +12,24 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+public static  function bla(){
+	if (isset(auth()->user->id)){
+	$ham = auth()->user()->id;
+
+}else{
+	$ham = 9999;
+};
+return $ham;
+}
+
+
     public function index()
-    {
+    {	
+	
+	$isSet = $this->bla();
 	$posts =  Post::orderBy('created_at','desc')->paginate(10);
-        return view('posts/index')->with('posts',$posts);
+        return view('posts/index')->with('posts',$posts)->with('isSet',$isSet);
     }
 
     /**
@@ -42,6 +56,7 @@ class PostsController extends Controller
 	$post= new Post;
     $post->title = $request->input('title');
     $post->body = $request->input('body');
+    $post->user_id = auth()->user()->id;
 $post->save();
 
 return redirect('/posts')->with('success','Post Created');
@@ -55,9 +70,13 @@ return redirect('/posts')->with('success','Post Created');
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {	$post = Post::find($id);
+    {	
+	
+	$isSet = $this->bla();
+
+	$post = Post::find($id);
        
-	 return view('posts/show')->with('post',$post);
+	 return view('posts/show')->with('post',$post)->with('isSet',$isSet);
 
     }
 
@@ -91,7 +110,8 @@ return redirect('/posts')->with('success','Post Created');
 	$post=new Post;
     	$post->title = $request->input('title');
     	$post->body = $request->input('body');
-	$post->save();
+	$post->user_id = auth()->user()->id;
+	$post->save(); 
 return redirect('/posts')->with('success','Post Updated');
 
     }

@@ -18,7 +18,7 @@
                     <li class="nav-item"><a href="/about">About</a></li>
                     <li class="nav-item"><a href="/services">Services</a></li>
                     <li class="nav-item"><a href="/posts">Blog</a></li>
-                    <li class="nav-item"><a href="/home">Dashboard</a></li>
+                    <li c
 		 </ul>
   
       <li class="nav-item">
@@ -39,7 +39,10 @@
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       
+					<a class="dropdown-item"  href="/home">Dashboard</a>
+
+					<a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
