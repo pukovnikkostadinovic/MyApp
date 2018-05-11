@@ -10,6 +10,8 @@
       <a class="nav-item nav-link" href="/about">About</a>
       <a class="nav-item nav-link" href="/services">Services</a>
       <a class="nav-item nav-link" href="/posts">Blog</a> 
+      <a class="nav-item nav-link" href="/something">Something</a> 
+
 
       <a class="nav-item nav-link disabled" href="#">Disabled</a> </div>
    </div>
