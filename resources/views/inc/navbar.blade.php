@@ -13,7 +13,7 @@
                         
                     </ul>
                     <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="/adminer">Adminer</a></li>
+                    <li class="nav-item"><a href="/adminer">Adminer1</a></li>
                     <li class="nav-item"><a href="/">Home</a></li>
                     <li class="nav-item"><a href="/about">About</a></li>
                     <li class="nav-item"><a href="/services">Services</a></li>
