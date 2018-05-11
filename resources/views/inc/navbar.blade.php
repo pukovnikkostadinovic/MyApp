@@ -8,6 +8,7 @@
       <a class="nav-item nav-link active" href="/adminer">Adminer <span class="sr-only">(current)</span></a> 
       <a class="nav-item nav-link" href="/">Home</a> 
       <a class="nav-item nav-link" href="/about">About</a>
+      <a class="nav-item nav-link" href="/services">Services</a>
       <a class="nav-item nav-link" href="/posts">Blog</a> 
 
       <a class="nav-item nav-link disabled" href="#">Disabled</a> </div>
