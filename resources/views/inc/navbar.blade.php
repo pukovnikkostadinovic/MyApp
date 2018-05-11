@@ -1,29 +1,24 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Laravel') }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        
-                    </ul>
                     <ul class="nav navbar-nav">
-                    <li class="nav-item"><a href="/adminer">Adminer1</a></li>
-                    <li class="nav-item"><a href="/">Home</a></li>
-                    <li class="nav-item"><a href="/about">About</a></li>
-                    <li class="nav-item"><a href="/services">Services</a></li>
-                    <li class="nav-item"><a href="/posts">Blog</a></li>
+                    <li class="nav-link"><a href="/adminer">Adminer1</a></li>
+                    <li class="nav-link"><a href="/">Home</a></li>
+                    <li class="nav-link"><a href="/about">About</a></li>
+                    <li class="nav-link"><a href="/services">Services</a></li>
+                    <li class="nav-link"><a href="/posts">Blog</a></li>
                     </ul>
-  
-      <li class="nav-item">
-        <a class="nav-link" href="/posts">Blog</a>
-      </li>
-      </ul>
+
+  </div>
+
+
+
+
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -51,6 +46,6 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
-            </div>
+                
+            
         </nav>
