@@ -14,7 +14,7 @@ class PostsController extends Controller
      */
 
 public static  function bla(){
-	if (isset(auth()->user->id)){
+	if (isset(auth()->user()->id)){
 	$ham = auth()->user()->id;
 
 }else{
@@ -26,6 +26,7 @@ return $ham;
 
     public function index()
     {	
+	
 	
 	$isSet = $this->bla();
 	$posts =  Post::orderBy('created_at','desc')->paginate(10);
