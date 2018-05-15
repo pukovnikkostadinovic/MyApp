@@ -70,14 +70,14 @@ return $ham;
 
 	//handle dile upload
 	if($request->hasFile('cover_image')){
-	$filenameWithExt = $request->file('cover_image')->getClientOriginalImage();
+	$filenameWithExt = $request->file('cover_image')->getClientOriginalName();
 	$filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
 
-	$extension = $request->file('cover_image')->getOriginalClientExtension();
+	$extension = $request->file('cover_image')->getClientOriginalExtension();
 
 	$fileNameToStore= $filename.'_'.time().'.'.$extension;
 
-	$path = $request->file('cover_image')->storeAs('public/cover_images',$fileNametoStore);
+	$path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
 
 	}else {
 	$fileNameToSTore = 'noimage.jpg';
