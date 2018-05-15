@@ -15,7 +15,8 @@
                     @endif
                     <a href="/posts/create" class="btn btn-primary">Create post</a>
                     <h3>Yout blog posts</h3>
-                    <table class="table table-striped">
+                @if (count($posts)>=1)   
+		 <table class="table table-striped">
                     <tr>
                     <th>Title</th>
                     <th></th>
@@ -23,10 +24,13 @@
                     @foreach($posts as $post)
                     <tr>
                     <th>{{$post->title}}</th>
-                    <th><a href="/posts/{{$post->id}}/edit" class="btn btn-default"></a></th>
+                    <th><a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a></th>
                     </tr>
                     @endforeach
                     </table>
+			@else
+			<p>You have no posts</p>
+			@endif
                 </div>
             </div>
         </div>
