@@ -23,7 +23,7 @@
                     </tr>
                     @foreach($posts as $post)
                     <tr>
-                    <td>>{{$post->title}}</td>
+                    <td>{{$post->title}}</td>
                     <td><a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a></td>
                     <td>
                         {{Form::hidden('_method', 'DELETE')}}
