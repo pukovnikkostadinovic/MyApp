@@ -1,8 +1,4 @@
 @extends('layouts/app')
-@section('css')
-<link rel="stylesheet" href="{{asset(css/gallery_css/baugete-box.css)}}" />
-<link rel="stylesheet" href="{{asset(css/gallery_css/cards-gallery.css)}}">
-@endsection
 @section('content')
 <a href="/posts" class="btn  btn-default">Go Back</a>
 <h3>{{$post->title}}</h3>
