@@ -64,11 +64,31 @@ return $ham;
     {
         $this->validate($request,[
 		'title'=>'required',
-		'body'=>'required']);
+		'body'=>'required',
+		'cover_image'=>'image|nullable|max:1999'	
+	]);
+
+	//handle dile upload
+	if($request->hasFile('cover_image')){
+	$filenameWithExt = $request->file('cover_image')->getClientOriginalImage();
+	$filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+	$extension = $request->file('cover_image')->getOriginalClientExtension();
+
+	$fileNameToStore= $filename.'_'.time().'.'.$extension;
+
+	$path = $request->file('cover_image')->storeAs('public/cover_images',$fileNametoStore);
+
+	}else {
+	$fileNameToSTore = 'noimage.jpg';
+
+	}
+
 	$post= new Post;
     $post->title = $request->input('title');
     $post->body = $request->input('body');
     $post->user_id = auth()->user()->id;
+    $post->cover_image = $fileNameToStore;
 $post->save();
 
 return redirect('/posts')->with('success','Post Created');
