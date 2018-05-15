@@ -23,8 +23,13 @@
                     </tr>
                     @foreach($posts as $post)
                     <tr>
-                    <th>{{$post->title}}</th>
-                    <th><a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a></th>
+                    <td>>{{$post->title}}</td>
+                    <td><a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a></td>
+                    <td>
+                        {{Form::hidden('_method', 'DELETE')}}
+                        {{Form::submit('Delete', ['class'=>'btn btn-danger'])}}
+                        {!!Form::close()!!}
+                    </td>
                     </tr>
                     @endforeach
                     </table>
