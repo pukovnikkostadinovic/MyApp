@@ -14,7 +14,7 @@ color ="red"
 @endif
 
 >{{$post->title}}</font></a></h3>
-<small>Written on {{$post->created_at}}</small>
+<small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
 </div>
 @endforeach
 {{$posts->links()}}

@@ -33,6 +33,12 @@
                onclick="event.preventDefault();
                document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
+
+            </a>
+            <a class="dropdown-item" href="/home">
+           	Home
+            </a>
+
             </a>
             <a class="dropdown-item" href="/posts/create">
             Create post
