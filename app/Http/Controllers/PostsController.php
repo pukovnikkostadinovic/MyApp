@@ -157,10 +157,9 @@ return redirect('/posts')->with('success','Post Created');
     $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
 
     }
-	$post=new Post;
+	$post=Post::find($id);
     	$post->title = $request->input('title');
     	$post->body = $request->input('body');
-	$post->user_id = auth()->user()->id;
     if($request->hasFile('cover_image')){
     $post->cover_image = $fileNameToStore;
 }
