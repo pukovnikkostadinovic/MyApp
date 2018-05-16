@@ -65,7 +65,7 @@ return $ham;
         $this->validate($request,[
 		'title'=>'required',
 		'body'=>'required',
-		'cover_image'=>'image|nullable|max:1999'	
+		'cover_image'=>'image|nullable|max:5000'	
 	]);
 
 	//handle dile upload
@@ -80,7 +80,7 @@ return $ham;
 	$path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
 
 	}else {
-	$fileNameToSTore = 'noimage.jpg';
+	$fileNameToStore = 'noimage.jpg';
 
 	}
 
@@ -88,8 +88,8 @@ return $ham;
     $post->title = $request->input('title');
     $post->body = $request->input('body');
     $post->user_id = auth()->user()->id;
-    $post->cover_image = $fileNameToStore;
-$post->save();
+    $post->cover_image = $fileNameToStore ;
+    $post->save();
 
 return redirect('/posts')->with('success','Post Created');
 
