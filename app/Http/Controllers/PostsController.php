@@ -143,11 +143,27 @@ return redirect('/posts')->with('success','Post Created');
     {
                 $this->validate($request,[
 		'title'=>'required',
-		'body'=>'required']);
+		'body'=>'required',
+        'cover_image'=>'image|nullable|max:5000']);
+
+                if($request->hasFile('cover_image')){
+    $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+    $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+    $extension = $request->file('cover_image')->getClientOriginalExtension();
+
+    $fileNameToStore= $filename.'_'.time().'.'.$extension;
+
+    $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+
+    }
 	$post=new Post;
     	$post->title = $request->input('title');
     	$post->body = $request->input('body');
 	$post->user_id = auth()->user()->id;
+    if($request->hasFile('cover_image')){
+    $post->cover_image = $fileNameToStore;
+}
 	$post->save(); 
 return redirect('/posts')->with('success','Post Updated');
 
