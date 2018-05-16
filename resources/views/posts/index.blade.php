@@ -4,12 +4,12 @@
 
 <h1>Posts</h1>
 @if(count($posts)>0)
-<ul>
 @foreach($posts as $post)
-<div class="well">
+<a href="/posts/{{$post->id}}">
+<div class="card card-block bg-faded">
 <div class="row">
 <div class="col-md-4 col-sm-4">
-<img style = "width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+<img style = "width:30%" class="rounded" src="/storage/cover_images/{{$post->cover_image}}">
 </div>
 <div class="col-md-8 col-sm-8">
 <h3><a href="/posts/{{$post->id}}" ><font 
@@ -23,10 +23,11 @@ color ="red"
 
 	</div>
        </div>
-      </div>
+      </div></a>
+<br>
 @endforeach
 {{$posts->links()}}
-</ul>
+
 @else
 <p>No posts found</p>
 @endif
